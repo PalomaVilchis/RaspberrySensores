@@ -1,0 +1,27 @@
+-> sudo pip3 install Adafruit_DHT
+
+Deberia obtenerse al concluir el proceso:
+Successfully installed Adafruit-DHT-1.4.0
+
+-> cd /usr/local/lib/python3.7/dist-packages/Adafruit_DHT
+-> ls
+
+Debemos modificar el archivo 
+platform_detect.py
+
+->sudo gedit platform_detect.py
+Puede utilizarse otro editor de texto que gedit, como nano. 
+O se puede instalar gedit con:
+->sudo apt-get install gedit
+
+Deberiamos agregar despues de la linea 110,despues del bloque 
+elif de  Pi 3b+:
+
+    elif match.group(1) == 'BCM2711':
+        # Pi 4
+        return 3
+
+
+Ya que por defecto solo se reconoce para versiones anteriores 
+de raspberry 3. 
+Guardamos el archivo y con esto podemos utilizar el sensor DHT11.
