@@ -1,5 +1,5 @@
-sudo pip3 install adafruit-circuitpython-dht
-sudo apt-get install libgpiod2
+#sudo pip3 install adafruit-circuitpython-dht
+#sudo apt-get install libgpiod2
 #ejecutar en terminal como sudo python3 nombre.py
 
 import Adafruit_DHT  
