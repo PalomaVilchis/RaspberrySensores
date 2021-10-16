@@ -11,9 +11,15 @@ Como la configuracion no acepta el mouse, te puedes mover con las flechas del te
 Paso 2: Instalacion de bibliotecas y paquetes
 
 Ejecutar (por separado)
- pip install PyMLX90614
- pip3 install PyMLX90614
- wget https://pypi.org/project/PyMLX90614/#files
+pip install PyMLX90614
+pip3 install PyMLX90614
+
+Ir a:
+https://pypi.org/project/PyMLX90614/#files
+y descargar el archivo
+
+Ejecutar ls para verificar en donde se guardo el archivo.
+
  
 Para extraer la descarga se ejecuta:
 tar -xf PyMLX90614-0.0.3.tar.gz
