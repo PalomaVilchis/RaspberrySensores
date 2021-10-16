@@ -1,3 +1,6 @@
+#se guarda con la extension .py
+#es para python 3
+
 from smbus2 import SMBus
 from mlx90614 import MLX90614
 
