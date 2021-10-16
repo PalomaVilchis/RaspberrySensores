@@ -1,3 +1,6 @@
+Para Blibliteca de Adafruit en Raspberry Pi 4
+
+Elaborado por Alejandro para Diplomado Codigo IoT, SIC_UAM
 -> sudo pip3 install Adafruit_DHT
 
 Deberia obtenerse al concluir el proceso:
