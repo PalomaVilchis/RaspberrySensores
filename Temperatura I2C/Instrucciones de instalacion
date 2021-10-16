@@ -1,0 +1,31 @@
+Este sensor establece comunicacion a traves del portocolo I2C, se instalan los siguientes paquetes
+
+Paso 1: Activar la comunicacion I2C
+
+Ejecutar el comando 
+sudo raspi-config
+
+Dentro de las opciones seleccionar "interfaces", Activar I2C
+Como la configuracion no acepta el mouse, te puedes mover con las flechas del teclado y para cambiar de menu con tab
+
+Paso 2: Instalacion de bibliotecas y paquetes
+
+Ejecutar (por separado)
+ pip install PyMLX90614
+ pip3 install PyMLX90614
+ wget https://pypi.org/project/PyMLX90614/#files
+ 
+Para extraer la descarga se ejecuta:
+tar -xf PyMLX90614-0.0.3.tar.gz
+
+Paso 3: configuracios de herramientas
+
+Despues se ejecuta (todo dentro de la carpeta creada para el paquete):
+cd PyMLX90614-0.0.3
+sudo apt-get install python-setuptools
+sudo apt-get install -y i2c-tools
+sudo python setup.py install
+ls /dev/*i2c*
+i2cdetect -y 1
+
+
