@@ -1,0 +1,7 @@
+$ sudo apt install maven
+$ mvn -v
+$ cd /home/pi/Downloads
+$ sudo apt install ./code_1.53.0-1612367698_armhf.deb
+$ sudo apt update
+$ sudo apt install code -y
+
