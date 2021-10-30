@@ -1,0 +1,6 @@
+Para la instalar la bibloteca en la raspberry se deben ejecutar los siguinetes pasos:
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo pip3 install spidev
+sudo pip3 install mfrc522
