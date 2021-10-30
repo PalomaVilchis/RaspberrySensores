@@ -1,0 +1,7 @@
+SDA  al pin 24.
+SCK  al pin 23.
+MOSI al pin 19.
+MISO al pin 21.
+GND  al pin 6.
+RST  al pin 22.
+3.3v  al pin 1.
