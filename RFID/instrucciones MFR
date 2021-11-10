@@ -7,3 +7,4 @@ sudo pip3 install mfrc522
 sudo apt install mariadb-server
 sudo mysql_secure_installation
 sudo apt install phpmyadmin
+sudo pip3 install mysql-connector-python
