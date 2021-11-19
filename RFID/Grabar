@@ -7,7 +7,7 @@ GPIO.setwarnings(False)
  
 sw1 = Button(21)
 sw2 = Button(16)
-sw3 = Button(20)
+
  
 reader = SimpleMFRC522()
  
@@ -23,7 +23,6 @@ try:
  text = input('New data:')
  print("Now place your tag to write")
  reader.write(text)
- buzzer.beep(0.1, 0.1, 1)
  print("Written")
  print()
  
