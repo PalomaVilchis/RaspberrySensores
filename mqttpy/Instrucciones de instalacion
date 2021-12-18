@@ -1,10 +1,6 @@
 instrucciones instalar paquete mqtt en Raspberry Pi
 
- sudo pip install sparkfun-qwiic-max3010x
  sudo apt-get install libatlas3-base libffi-dev at-spi2-core python3-gi-cairo
  sudo pip3 install matplotlib
  sudo pip3 install cairocffi
  pip3 install sparkfun-qwiic-max3010x
- Ir a https://pypi.org/project/sparkfun-qwiic-i2c/#files y descargar el archivo
- cd Downloads
- pip install sparkfun_qwiic_i2c-0.9.11.tar.gz
