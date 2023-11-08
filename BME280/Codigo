@@ -1,44 +1,19 @@
-#bibliotecas
+# ladyada for Adafruit Industries
+
+
 import time
-import smbus2
-import bme280
+import board
+from adafruit_bme280 import basic as adafruit_bme280
 
-# Dirección del sensor (completar la dirección)
-address = 0x
+i2c = board.I2C()  
 
-# Inicializando el bus datos
-bus = smbus2.SMBus(1)
+bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
 
-# Carga los parámetros de calibración
-calibration_params = bme280.load_calibration_params(bus, address)
-
-def celsius_to_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
+bme280.sea_level_pressure = 1013.25
 
 while True:
-    try:
-        #Lectura de datos
-        data = bme280.sample(bus, address, calibration_params)
-
-        # Asignando variables
-        temperature_celsius = data.temperature
-        pressure = data.pressure
-        humidity = data.humidity
-
-        # Conversión de unidades grados a fanrenheit
-        temperature_fahrenheit = celsius_to_fahrenheit(temperature_celsius)
-
-        # Mostrando las lecturas
-        print("Temperatura: {:.2f} °C, {:.2f} °F".format(temperature_celsius, temperature_fahrenheit))
-        print("Presión: {:.2f} hPa".format(pressure))
-        print("Humedad {:.2f} %".format(humidity))
-
-        # Tiempo de espera entre lecturas
-        time.sleep(2)
-
-    except KeyboardInterrupt:
-        print('Lecturas detenidas')
-        break
-    except Exception as e:
-        print('Error inesparado', str(e))
-        break
+    print("\nTemperature: %0.1f C" % bme280.temperature)
+    print("Humidity: %0.1f %%" % bme280.relative_humidity)
+    print("Pressure: %0.1f hPa" % bme280.pressure)
+    print("Altitude = %0.2f meters" % bme280.altitude)
+    time.sleep(2)
