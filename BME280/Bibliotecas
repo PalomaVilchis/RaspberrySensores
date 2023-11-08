@@ -1,0 +1,17 @@
+Antes de utilizar este sensor, se deben de cambiar la conficguración de las Raspberry Pi con los siguientes comandos
+sudo raspi-config
+
+Ingresas a las conficguración del dispositivo, hay que seleccionar "interface options" -----> "Enable/disable" I2C. Terminar con "yes"
+
+sudo reboot
+
+Luego instalar las bibliotecas BME280
+
+sudo pip install --upgrade pip
+sudo pip install RPI.BME280
+
+Realizar la conexion del sensor (revisar el archivo BME280) y ejecutar:
+
+sudo i2cdetect -y 1
+
+Esto es para saber en que dirección se encuentra habilitado el sensor.
