@@ -7,8 +7,7 @@ sudo reboot
 
 Luego instalar las bibliotecas BME280
 
-sudo pip install --upgrade pip
-sudo pip install RPI.BME280
+sudo pip3 install adafruit-circuitpython-bme280
 
 Realizar la conexion del sensor (revisar el archivo BME280) y ejecutar:
 
