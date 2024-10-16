@@ -1,0 +1,20 @@
+Instrucciones para instalación de bibliotecas para el acelerómetro
+
+    • Por seguridad, la raspberry crea un entrono virtual, sin embargo para algunas aplicaciones no funcionan en dicho entorno; por lo que es necesario ejecutar (desde terminal) la siguiente instrucción:
+	
+    • python3 -v   (observar la versión de python instalada, ej: python 3.11.2)
+    • sudo rm /usr/lib/python3.xx/EXTERNALLY-MANAGED ( se intercambia por la versión instalada, ej: sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED)
+
+El siguiente paso es instalar los paquetes necesarios para el reconocimiento y manejo del sensor:
+
+    • sudo apt-get update
+    • sudo apt-get upgrade
+    • sudo apt-get install python3-dev python3-pip python3-smbus i2c-tools -y
+    • sudo i2cdetect -y 1
+    • sudo pip3 install adafruit-circuitpython-ADXL34x
+
+Finalmente ejecuta:
+
+    • sudo reboot (para reiniciar el sistema y aplicar los cambios)
+
+Ahora ya puedes probar el sensor.
