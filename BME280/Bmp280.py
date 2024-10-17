@@ -1,13 +1,18 @@
 #Creditos: https://pypi.org/project/bmp-280/
 
-from bmp_280 import BMP280
-from time import sleep
+import time
+import board
+import adafruit_bmp280
 
-bmp = BMP280(port=1, mode=BMP280.FORCED_MODE, oversampling_p=BMP280.OVERSAMPLING_P_x16, oversampling_t=BMP280.OVERSAMPLING_T_x1,
-            filter=BMP280.IIR_FILTER_OFF, standby=BMP280.T_STANDBY_1000)
 
-pressure = bmp.read_pressure()
-temp = bmp.read_temperature()
+i2c = board.I2C() 
+bmp280 = adafruit_bmp280.Adafruit_BMP280_I2C(i2c)
 
-print("Presion(hPa): " + str(pressure))
-print("Temperatura (°C): " + str(temp))
+
+bmp280.sea_level_pressure = 1013.25
+
+while True:
+    print("\nTemperatura: %0.1f C" % bmp280.temperature)
+    print("Presioón: %0.1f hPa" % bmp280.pressure)
+    print("Altitud = %0.2f metros" % bmp280.altitude)
+    time.sleep(2)
