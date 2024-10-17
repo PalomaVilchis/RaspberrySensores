@@ -1,0 +1,5 @@
+Instrucciones
+
+Antes de ejecutar el codigo, se debe de instalar la bliblioteca con el  comando:
+
+sudo pip3 install adafruit-circuitpython-ads1x15
