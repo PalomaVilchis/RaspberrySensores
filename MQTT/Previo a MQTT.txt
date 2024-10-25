@@ -1,0 +1,15 @@
+Recuerda que antes de probar los códigos, es necesario relizar los siguientes pasos:
+
+-sudo apt update
+-sudo apt upgrade
+-pip3 install paho-mqtt
+-sudo apt install mosquitto mosquitto-clients
+-sudo systemctl enable mosquitto.service
+
+Finalmente, en caso de que Thonny no reconozca la biblioteca paho, hay que seguir la ruta:
+
+-Tools
+-Manage Packages
+-En la ventana que se abre, buscar paho_mqtt (consulta la imagen adjunta)
+
+
