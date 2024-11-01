@@ -3,9 +3,9 @@ from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
 
-Motor1 = 40  # Entrada
+Motor1 = 36  # Entrada
 Motor2 = 38    # Entrada
-Motor3 = 36   # Habilitar
+Motor3 = 40   # Habilitar
 
 GPIO.setup(Motor1,GPIO.OUT)
 GPIO.setup(Motor2,GPIO.OUT)
