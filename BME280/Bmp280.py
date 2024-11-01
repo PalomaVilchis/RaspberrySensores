@@ -7,6 +7,7 @@ import adafruit_bmp280
 
 i2c = board.I2C() 
 bmp280 = adafruit_bmp280.Adafruit_BMP280_I2C(i2c)
+#bmp280 = adafruit_bmp280.Adafruit_BMP280_I2C(i2c, address=0x76)
 
 
 bmp280.sea_level_pressure = 1013.25
