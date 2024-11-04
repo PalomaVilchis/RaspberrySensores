@@ -2,11 +2,11 @@ Recuerda que antes de probar los códigos, es necesario relizar los siguientes p
 
 -sudo apt update
 -sudo apt upgrade
--sudo pip3 install adafruit-circuitpython-bme280
+-sudo pip3 install adafruit-circuitpython-bmp280
 -sudo i2cdetect -y 1
 
 Finalmente, en caso de que Thonny no reconozca la biblioteca BMP, hay que seguir la ruta:
 
 -Tools
 -Manage Packages
--En la ventana que se abre, buscar  adafruit-circuitpython-bme280 e instalar.
+-En la ventana que se abre, buscar  adafruit-circuitpython-bmp280 e instalar.
